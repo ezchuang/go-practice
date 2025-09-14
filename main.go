@@ -2,57 +2,80 @@ package main
 
 // 1
 // func main() {
-// 	fmt.Println("Hi there!")
+//     fmt.Println("Hi there!")
 // }
 
 // 2
 // func main() {
-// 	var card string = "Five of Diamonds"
+//     var card string = "Five of Diamonds"
 
-// 	fmt.Println(card)
+//     fmt.Println(card)
 // }
 
 // 3
 // func main() {
-// 	card := "Ace of Spades"
-// 	card = "Five of Diamonds"
+//     card := "Ace of Spades"
+//     card = "Five of Diamonds"
 
-// 	fmt.Println(card)
+//     fmt.Println(card)
 // }
 
 // 4
 // func main() {
-// 	card := newCard()
+//     card := newCard()
 
-// 	fmt.Println(card)
+//     fmt.Println(card)
 // }
 
 // func newCard() string {
-// 	return "Five of Diamonds"
+//     return "Five of Diamonds"
 // }
 
 // 5
 // func main() {
-// 	cards := []string{"Ace of Diamonds", newCard()}
-// 	cards = append(cards, "Six of Spades")
+//     cards := []string{"Ace of Diamonds", newCard()}
+//     cards = append(cards, "Six of Spades")
 
-// 	for i, card := range cards {
-// 		fmt.Println(i, card)
-// 	}
+//     for i, card := range cards {
+//         fmt.Println(i, card)
+//     }
 // }
 
 // func newCard() string {
-// 	return "Five of Diamonds"
+//     return "Five of Diamonds"
 // }
 
 // 6
+// func main() {
+//     cards := newDeck()
+
+//     hand, remainingDeck := deal(cards, 5)
+
+//     hand.print()
+//     remainingDeck.print()
+// }
+
+// 7
+// func main() {
+// 	greeting := "Hi there!"
+// 	fmt.Println([]byte(greeting))
+// }
+
+// 8
+// func main() {
+// 	cards := newDeck()
+// 	cards.saveToFile("my_cards")
+// }
+
+// 9
+// func main() {
+// 	cards := newDeckFromFile("my_cards")
+// 	cards.print()
+// }
+
+// 10
 func main() {
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
-
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
-}
-
-func newCard() string {
-	return "Five of Diamonds"
 }
